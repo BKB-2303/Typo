@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typo</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-950 flex flex-col min-h-screen font-mono">
+    <div class="p-6">
+        <!-- Header start -->
+        <header class="flex items-center justify-between bg-black p-4 ">
+            <div class="flex items-center ">
+                <p class="sm:text-xl text-orange-500 sm:ml-4">Time:  <span class="text-green-200" id="timer"> 0 s</span></p>
+            </div>
+            <div class="flex items-center">
+                <img src="BKB.jpg" alt="Middle Image" class="w-20 h-16 sm:w-28 sm:h-24 rounded-full">
+            </div>
+            <div class="flex items-center">
+                <p class="text-orange-500 sm:text-xl sm:mr-4">Mistakes: <span class="text-green-200" id="mistakes">0</span></p>
+            </div>
+        </header>
+        <!-- Header end -->
+    </div> 
+    <div class="flex flex-col items-center p-6 space-y-4 flex-1">
+        <div class="text-white" id="quote" onmousedown="return false" onselectstart="return false" ></div>
+        <textarea name="" id="quote-input" cols="30" rows="5" class="w-[90%] bg-black p-4 rounded-lg text-white text-xl typewriter-placeholder"  placeholder="Type here when the test starts.."></textarea>
+    </div>
+    <div class="flex justify-center">
+        <img src="refresh.png" alt="Refresh Icon" class=" w-8 h-8 my-auto mr-6" onclick="location.reload();" />
+        <button id="start-test" onclick="startTest()"  class="px-4 py-3 border-dotted border-white text-slate-300 border-2 bg-black hover:bg-green-200 hover:text-black rounded-lg text-xl ">Start Test</button>
+        <button id="stop-test" onclick="displayResult()" class="px-4 py-3 border-dotted border-white text-slate-300 border-2 bg-black hover:bg-green-200 hover:text-black rounded-lg text-xl ">Stop Test</button>
+
+    </div>
+    <div class="p-4 bg-black mt-8 result ">
+        <h3 class="text-center text-white underline">Result</h3>
+        
+        <div class="flex p-4 sm:p-8 text-white justify-between ">
+            <p >🎯Accuracy: <span id="accuracy"> </span></p>
+            <p>🚀Speed:  <span id="wpm"> </span></p>
+        </div>
+    </div>
+    <hr class="w-[60%] mx-auto border-dotted border-gray-500 ">
+
+    <footer class="bg-black">
+        <div class="flex flex-col items-center p-6">
+            <h3 class="text-orange-200">Developed by <a href="https://bikashborah.netlify.app/" class="hover:text-green-200">Bikash</a> </h3>
+            <p class="text-white text-slate-300">Copyright © BKB 2023. All Rights Reserved</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
